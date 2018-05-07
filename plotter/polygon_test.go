@@ -150,6 +150,10 @@ func ExamplePolygon_hexagons() {
 			x += dx
 		}
 	}
+
+	p.X.Min, p.X.Max = 0, 10
+	p.Y.Min, p.Y.Max = 0, 6
+
 	if err = p.Save(100, 100, "testdata/polygon_hexagons.png"); err != nil {
 		log.Panic(err)
 	}
